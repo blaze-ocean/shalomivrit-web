@@ -1,13 +1,12 @@
 import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import crypto from 'crypto';
-import { ROBOKASSA_MERCHANT_LOGIN, ROBOKASSA_PASSWORD1 } from '$env/static/private';
 
 function md5(str: string): string {
   return crypto.createHash('md5').update(str).digest('hex');
 }
 
-export const GET: RequestHandler = async ({ url }) => {
+export const GET: RequestHandler = async ({ url, platform }) => {
   const email = url.searchParams.get('Email');
   const description = url.searchParams.get('Description');
   const outSumParam = url.searchParams.get('OutSum');
@@ -16,9 +15,15 @@ export const GET: RequestHandler = async ({ url }) => {
     throw redirect(303, '/payment?error=missing_params');
   }
 
-  const merchantLogin = ROBOKASSA_MERCHANT_LOGIN;
-  const password1 = ROBOKASSA_PASSWORD1;
+  // Get environment variables from platform env (Cloudflare)
+  const merchantLogin = platform?.env?.ROBOKASSA_MERCHANT_LOGIN || '';
+  const password1 = platform?.env?.ROBOKASSA_PASSWORD1 || '';
   const culture = 'ru';
+
+  if (!merchantLogin || !password1) {
+    console.error('Missing Robokassa credentials in environment variables');
+    throw redirect(303, '/payment?error=config_error');
+  }
   
   // Add 3% commission
   const outSum = (parseFloat(outSumParam) * 1.03).toFixed(2);
