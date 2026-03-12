@@ -32,7 +32,27 @@
 </script>
 
 <svelte:head>
-  <title>Оплата курса - Shalom Ivrit</title>
+  <title>Оплата курса - Shalom Ivrit | Безопасная оплата через Robokassa</title>
+  <meta name="description" content="Оплата курсов иврита онлайн. Безопасная оплата через Robokassa. Стандартные и интенсивные курсы, индивидуальные занятия." />
+  <meta name="keywords" content="оплата курса иврита, оплатить иврит, robokassa, оплата онлайн" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shalomivrit.ru/payment" />
+  <meta property="og:title" content="Оплата курса - Shalom Ivrit" />
+  <meta property="og:description" content="Безопасная оплата курсов иврита онлайн через Robokassa" />
+  <meta property="og:image" content="https://shalomivrit.ru/shalomivrit-home-hero-1.png" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://shalomivrit.ru/payment" />
+  <meta property="twitter:title" content="Оплата курса - Shalom Ivrit" />
+  <meta property="twitter:description" content="Безопасная оплата курсов иврита онлайн через Robokassa" />
+  <meta property="twitter:image" content="https://shalomivrit.ru/shalomivrit-home-hero-1.png" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://shalomivrit.ru/payment" />
 </svelte:head>
 
 <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">

@@ -3,6 +3,32 @@
     import Teachers from "$lib/components/teachers.svelte";
     import Testimonails from "$lib/components/testimonails.svelte";
 </script>
+
+<svelte:head>
+    <title>Shalom Ivrit - Курсы иврита онлайн | Изучение иврита с нуля</title>
+    <meta name="description" content="Изучение иврита онлайн с профессиональными преподавателями. Стандартные и интенсивные курсы, индивидуальные занятия. Начните говорить на иврите уже через 5 месяцев!" />
+    <meta name="keywords" content="иврит, курсы иврита, изучение иврита, иврит онлайн, уроки иврита, Hebrew courses, учить иврит" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shalomivrit.ru/" />
+    <meta property="og:title" content="Shalom Ivrit - Курсы иврита онлайн" />
+    <meta property="og:description" content="Изучение иврита онлайн с профессиональными преподавателями. Начните говорить на иврите уже через 5 месяцев!" />
+    <meta property="og:image" content="https://shalomivrit.ru/shalomivrit-home-hero-1.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://shalomivrit.ru/" />
+    <meta property="twitter:title" content="Shalom Ivrit - Курсы иврита онлайн" />
+    <meta property="twitter:description" content="Изучение иврита онлайн с профессиональными преподавателями. Начните говорить на иврите уже через 5 месяцев!" />
+    <meta property="twitter:image" content="https://shalomivrit.ru/shalomivrit-home-hero-1.png" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Russian" />
+    <link rel="canonical" href="https://shalomivrit.ru/" />
+</svelte:head>
+
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <div class="text-2xl font-extrabold tracking-tight text-blue-600">
